@@ -14,18 +14,33 @@ def main():
     
     # Questionaire
     print("Enter the following details for the blog:")
+
     title = input("Title: ")
+
     author = input("Author (Bhaskar Bhardwaj): ")
-    if(author == ""):
+    if author == "":
         author = "Bhaskar Bhardwaj"
+
+    author_img = input("Author Image (https://github.com/bhaskar0120.png): ")
+    if author_img == "":
+        author_img = "https://github.com/bhaskar0120.png"
+    
     description = input("Description: ")
     date = get_date()
+
+    background_image = input("Background Image (https://picsum.photos/1000/300): ")
+    if background_image == "":
+        background_image = "https://picsum.photos/1000/300"
+
+
     print("")
     print("Is the following information correct?")
     print("Title: ", title)
     print("Author: ", author)
+    print("Author Image: ", author_img)
     print("Date: ", date)
     print("Description: ", description)
+    print("Background Image: ", background_image)
     print("")
     print("Enter 'Y' to continue or any other key to exit")
     if input() != 'Y':
@@ -51,10 +66,6 @@ def main():
     with open('all.json') as f:
         all_files = load(f)
     
-    # increment the total
-    all_files['total'] += 1
-    
-
     # add the new blog to the list
     all_files['blogs'].append(meta)
     
@@ -66,6 +77,8 @@ def main():
     # create metadata for md file
     meta_md = {
         "author": author,
+        "authorImg": author_img,
+        "backgroundImg": background_image,
         "date": date,
         "blog": blog
     }

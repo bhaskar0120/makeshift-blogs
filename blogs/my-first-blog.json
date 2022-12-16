@@ -1,5 +1,7 @@
 {
     "author": "Bhaskar Bhardwaj",
+    "authorImg": "https://github.com/bhaskar0120.png",
+    "backgroundImg": "https://picsum.photos/1000/300",
     "date": "16 Dec. 2022",
     "blog": "# My first blog\n\nThis is my first blog \nThis is just to test\n\nSome code\n```\n#include <stdio.h>\n\nvoid main(void){\n    printf(\"Hello World\");\n}\n````\n\n\n"
 }
